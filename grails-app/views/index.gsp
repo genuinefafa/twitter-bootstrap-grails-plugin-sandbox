@@ -77,8 +77,9 @@
 				#page-body h1 {
 					margin-top: 0;
 				}
-			}
+			}			
 		</style>
+	    <r:require modules="bootstrap"/>
 	</head>
 	<body>
 		<a href="#page-body" class="skip"><g:message code="default.link.skip.label" default="Skip to content&hellip;"/></a>
