@@ -12,13 +12,58 @@
 		<link rel="shortcut icon" href="${resource(dir: 'images', file: 'favicon.ico')}" type="image/x-icon">
 		<link rel="apple-touch-icon" href="${resource(dir: 'images', file: 'apple-touch-icon.png')}">
 		<link rel="apple-touch-icon" sizes="114x114" href="${resource(dir: 'images', file: 'apple-touch-icon-retina.png')}">
-		<link rel="stylesheet" href="${resource(dir: 'css', file: 'main.css')}" type="text/css">
-		<link rel="stylesheet" href="${resource(dir: 'css', file: 'mobile.css')}" type="text/css">
+		<style type="text/css">
+			body {
+				padding-top: 40px;
+			}
+		</style>
+
 		<g:layoutHead/>
 		<r:layoutResources />
 	</head>
 	<body>
-		<div id="grailsLogo" role="banner"><a href="http://grails.org"><img src="${resource(dir: 'images', file: 'grails_logo.png')}" alt="Grails"/></a></div>
+
+    <div class="navbar navbar-inverse navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container">
+          <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="brand" href="./index.html">Bootstrap</a>
+          <div class="nav-collapse collapse">
+            <ul class="nav">
+              <li class="">
+				<a href="http://grails.org">
+					<img src="${resource(dir: 'images', file: 'grails_logo.png')}" alt="Grails" width="80px"/>
+				</a>              
+			  </li>
+              <li class="active">
+                <a href="./getting-started.html">Get started</a>
+              </li>
+              <li class="">
+                <a href="./scaffolding.html">Scaffolding</a>
+              </li>
+              <li class="">
+                <a href="./base-css.html">Base CSS</a>
+              </li>
+              <li class="">
+                <a href="./components.html">Components</a>
+              </li>
+              <li class="">
+                <a href="./javascript.html">JavaScript</a>
+              </li>
+              <li class="">
+                <a href="./customize.html">Customize</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+		<div id="grailsLogo" role="banner"></div>
 		<g:layoutBody/>
 		<div class="footer" role="contentinfo"></div>
 		<div id="spinner" class="spinner" style="display:none;"><g:message code="spinner.alt" default="Loading&hellip;"/></div>
