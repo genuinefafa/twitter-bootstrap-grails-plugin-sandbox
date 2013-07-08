@@ -17,8 +17,9 @@
 				padding-top: 40px;
 			}
 		</style>
+
+    <r:require modules="custom-bootstrap"/>
     
-    <r:require modules="bootstrap"/>
     <r:require modules="bootstrap-responsive-less"/>
 
 		<g:layoutHead/>

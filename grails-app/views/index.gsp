@@ -4,11 +4,9 @@
 		<meta name="layout" content="main"/>
 		<title>Welcome to Grails</title>	
 		</style>
-	    <r:require modules="bootstrap"/>
-	    <r:require modules="bootstrap-responsive-less"/>
 	</head>
-	<body>
 
+	<body>
 <header class="jumbotron subhead" id="overview">
   <div class="container">
     <h1>Welcome to Grails</h1>
@@ -23,6 +21,8 @@
 <div class="row">
     <div class="span3">
     	<ul class="nav nav-list affix">
+    		<li><a href="#installedPlugins">Installed Plugins</a></li>
+    		<li><a href="#controllers">Controller List</a></li>
     		<li class="nav-header">Application Status</li>
 	      	<ul>
 				<li>App version: <g:meta name="app.version"/></li>
@@ -35,26 +35,33 @@
 				<li>Services: ${grailsApplication.serviceClasses.size()}</li>
 				<li>Tag Libraries: ${grailsApplication.tagLibClasses.size()}</li>
 			</ul>
-    		<li><a href="#">Installed Plugins</a></li>
-    		<li><a href="#">Controller List</a></li>
     	</ul>
 	</div>
 	<div class="span9">
-		<h2>Application Status</h1>
+		<section id="installedPlugins">
 		<h2>Installed Plugins</h1>
 		<ul>
+			<table class="table table-striped">
+				<thead><tr><th>Plugin</th><th>Version</th></tr></thead>
+				<tbody>
 			<g:each var="plugin" in="${applicationContext.getBean('pluginManager').allPlugins}">
-				<li>${plugin.name} - ${plugin.version}</li>
+				<tr><td>${plugin.name}</td><td>${plugin.version}</td></tr>
 			</g:each>
+		</tbody>
+			</table>
 		</ul>
+	</section>
+	<section id="controllers">
 		<div id="controller-list" role="navigation">
 			<h2>Available Controllers:</h2>
-			<ul>
+			<table class="table table-striped">
 				<g:each var="c" in="${grailsApplication.controllerClasses.sort { it.fullName } }">
-					<li class="controller"><g:link controller="${c.logicalPropertyName}">${c.fullName}</g:link></li>
+
+					<tr><td><g:link controller="${c.logicalPropertyName}">${c.fullName}</g:link></td></tr>
 				</g:each>
-			</ul>
+			</table>
 		</div>
+	</section>
 	</div>
 </div>
 </body>
