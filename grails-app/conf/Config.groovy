@@ -59,16 +59,6 @@ grails.exceptionresolver.params.exclude = ['password']
 // configure auto-caching of queries by default (if false you can cache individual queries with 'cache: true')
 grails.hibernate.cache.queries = false
 
-grails.resources.modules = {
-    'custom-bootstrap' {
-        dependsOn 'bootstrap'
-        resource url:[dir: 'less', 
-            file: 'custom-bootstrap.less'], 
-            attrs: [rel: "stylesheet/less", type:'css']
-    }
-
-}
-
 environments {
     development {
         grails.logging.jul.usebridge = true
@@ -83,9 +73,12 @@ environments {
 log4j = {
     // Example of changing the log pattern for the default console appender:
     //
-    //appenders {
-    //    console name:'stdout', layout:pattern(conversionPattern: '%c{2} %m%n')
-    //}
+    appenders {
+        console name:'stdout', layout:pattern(conversionPattern: '%c{2} %m%n')
+    }
+
+    debug "grails.plugins.twitterbootstrap"
+    // ,              "org.grails.plugin.resource"
 
     error  'org.codehaus.groovy.grails.web.servlet',        // controllers
            'org.codehaus.groovy.grails.web.pages',          // GSP

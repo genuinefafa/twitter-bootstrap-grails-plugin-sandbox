@@ -61,10 +61,12 @@ grails.project.dependency.resolution = {
     
         compile ':cache:1.0.1'
 
-        compile(":less-resources:1.3.3.1") {
+        compile ":lesscss-resources:1.3.3"
+
+/**        compile(":less-resources:1.3.3.1") { 
             // depends on :resources:1.2.RC2 (and we are using a better one)
             exclude "resources" 
         }
-
+**/
     }
 }
