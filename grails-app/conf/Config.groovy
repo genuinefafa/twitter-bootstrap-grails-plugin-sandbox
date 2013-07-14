@@ -34,6 +34,10 @@ grails.mime.types = [
 
 // What URL patterns should be processed by the resources plugin
 grails.resources.adhoc.patterns = ['/images/*', '/css/*', '/js/*', '/plugins/*']
+grails.resources.debug = false
+
+grails.plugins.twitterbootstrap.defaultBundle = "bundle_bootstrap.css"
+grails.plugins.twitterbootstrap.configDir = "/less"
 
 // The default codec used to encode data with ${}
 grails.views.default.codec = "none" // none, html, base64

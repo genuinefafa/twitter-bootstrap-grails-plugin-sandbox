@@ -20,8 +20,6 @@
 
     <r:require modules="custom-bootstrap"/>
     
-    <r:require modules="bootstrap-responsive-less"/>
-
 		<g:layoutHead/>
 		<r:layoutResources />
 	</head>
